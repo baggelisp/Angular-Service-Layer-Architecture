@@ -1,0 +1,15 @@
+<button (click)='getToDos()'>Get data</button>
+<table id="todo-list">
+  <tr>
+    <th>ID</th>
+    <th>USER ID</th>
+    <th>TITLE</th>
+    <th>COMPLETED</th>
+  </tr>
+  <tr *ngFor="let todo of todosService.todos$ | async" >
+    <td>{{todo.id}}</td>
+    <td>{{todo.userId}}</td>
+    <td>{{todo.title}}</td>
+    <td>{{todo.completed}}</td>
+  </tr>
+</table>
